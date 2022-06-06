@@ -1,0 +1,9 @@
+Pertama, menggunakan PHP 7 sebagai base image untuk membuat docker image.
+Kedua, menjalankan update dan juga install beberapa dependencies seperti open ssl, git, dsb.
+Ketiga, mengundun installer Composer melalui metoder CURL, ditaruh pada directory /usr/local/bin.
+Keempat, melakukan instalasi docker-php extension dan juga driver PDO MySQL.
+Kelima, set variabel path relatif WORKDIR menjadi "/app".
+Keenam, mengcopy seluruh file ke direktori "/app".
+Ketujuh,  melakukan instalasi composer.
+Kedelapan, melakukan ekseksui php artisan serve untuk mendeploy aplikasi pada host apapun yang sedang tersedia untuk dipakai (tidak spesifik). Misal apabila server menggunakan IP 203.6.148.250, maka aplikasi akan dideploy pada 203.6.148.250:8181
+Terakhir, set port 8181 sebagai port yg bisa digunakan docker pada saat container dijalankan.
